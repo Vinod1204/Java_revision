@@ -1,0 +1,38 @@
+It is declared with the abstract Keyword. It may contain both abstract methods and concrete (normal) methods.
+Ex:
+abstract class Vechile
+{
+    abstract void Start();
+    void Stop(){
+        System.out.println("Vechile is stopping....");
+    }
+    
+}
+class Car extends Vechile
+{
+    @Override
+    void Start()
+    {
+        System.out.println("Car is starting with the key..");
+    }
+}
+class Bike extends Vechile
+{
+    @Override
+    void Start(){
+    System.out.println("Bike is starting with the kick..");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Vechile myCar=new Car();
+		myCar.Start();
+		myCar.Stop();
+		
+		Vechile myBike=new Bike();
+		myBike.Start();
+		myBike.Stop();
+	}
+}
