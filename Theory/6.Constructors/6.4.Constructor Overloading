@@ -1,0 +1,43 @@
+Multiple constructors can coexist in a class, provided they have different parameter lists.
+
+Code:
+class Person {
+    String name;
+    int age;
+
+    // Default Constructor
+    public Person() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Parameterized Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to display details
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Using default constructor
+        Person person1 = new Person();
+        person1.displayDetails();
+
+        // Using parameterized constructor
+        Person person2 = new Person("Bob", 30);
+        person2.displayDetails();
+    }
+}
+
+Output:
+Name: Unknown
+Age: 0
+Name: Bob
+Age: 30
