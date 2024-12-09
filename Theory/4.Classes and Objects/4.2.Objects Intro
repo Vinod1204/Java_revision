@@ -4,3 +4,6 @@ When you create an object, you allocate memory for the class and assign values t
 
 1.	An object is a real-world entity, like a car, dog or book.
 2.	It has state (data stored in fields) and behavior ( methods).
+
+To create an object, use the new keyword followed by a call to the class constructor.
+Person person1=new Person(“Vinod”, 23);
