@@ -1,0 +1,7 @@
+Class:
+Blueprint or template for creating objects. 
+It defines the properties (fields) and behaviors (methods) that the object of the class will have.
+
+Structure of Class:
+Fields: Properties or attributes of the class.
+Methods:  the actions or behaviors the class can perform.
