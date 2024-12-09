@@ -1,0 +1,10 @@
+Bundling Data (variables ) and methods ( functions ) that operates on the data into a single unit, usually a class.
+Via access modifiers we can restrict direct access to some of an object’s components.
+Key Features:
+1.	Data hiding -> internal details of a class are hidden from the outside world.
+2.	Access control -> Access to variables and methods using access modfiers.
+a.	Private -> Access to only within the same class
+b.	Protected -> Access within package and by subclass
+c.	Public 	-> Access from anywhere 
+d.	Default -> Access within the same package.
+3.	Getter and Setter methods -> used to provide access to private variables.
