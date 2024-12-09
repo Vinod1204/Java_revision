@@ -1,0 +1,83 @@
+Example:
+class BankAccount
+{
+    private String accholdername;
+    private double balance;
+    
+    public BankAccount(String accholdername,double intialdeposit)
+    {
+        this.accholdername=accholdername;
+        if(intialdeposit>0)
+        {
+            this.balance=intialdeposit;
+        }
+        else{
+            this.balance=0;
+        }
+    }
+    public String getaccholdername()
+    {
+        return accholdername;
+    }
+    public void setaccholdername(String accholdername)
+    {
+        this.accholdername=accholdername;
+    }
+    
+    double getBalance()
+    {
+        return balance;
+    }
+    
+    void deposit(double amount)
+    {
+        if(amount>0)
+        {
+        balance+=amount;
+        System.out.println("Balance:"+amount);
+        }
+        else{
+            System.out.println("Invalid deposit amount");
+        }
+    }
+    
+    void withdraw(double amount)
+    {
+        if(amount>0 && amount<=balance)
+        {
+            balance-=amount;
+            System.out.println("Balance:"+ balance);
+        }
+        else{
+            System.out.println("Insufficient Balance");
+        }
+    }
+    
+  
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		BankAccount account=new BankAccount("Vinod",1000);
+		System.out.println(account.getaccholdername());
+		account.setaccholdername("Vinod D");
+		System.out.println(account.getaccholdername());
+		System.out.println(account.getBalance());
+		account.deposit(1000);
+		account.withdraw(3000);
+		account.withdraw(1500);
+		System.out.println(account.getBalance());
+	}
+}
+
+O/p:
+Hello World
+Vinod
+Vinod D
+1000.0
+Balance:1000.0
+Insufficient Balance
+Balance:500.0
+500.0
