@@ -1,0 +1,4 @@
+Real-Life Example of Encapsulation
+•	Consider a car:
+o	The driver interacts with the car through controls like the steering wheel, pedals, and gearshift (methods).
+o	The internal mechanics (engine, transmission) are hidden and inaccessible directly to the driver (private fields).
