@@ -1,0 +1,28 @@
+Scope:
+Accessible within the same package.
+Accessible in a subclass in another package via inheritance.
+Usage: Protects the data but allows controlled access via inheritance.
+
+// File: Parent.java
+package somepackage;
+
+public class Parent {
+    protected String name = "Protected Name";
+
+    protected void displayName() {
+        System.out.println("Name: " + name);
+    }
+}
+
+// File: Child.java
+package anotherpackage;
+
+import somepackage.Parent;
+
+public class Child extends Parent {
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.displayName(); // Output: Name: Protected Name
+    }
+}
+Note: If Parent is not extended, name and displayName() won't be accessible outside the package.
