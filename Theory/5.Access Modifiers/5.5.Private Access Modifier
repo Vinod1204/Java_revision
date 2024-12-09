@@ -1,0 +1,23 @@
+Scope: Accessible only within the same class.
+Usage: Used for data hiding and restricting access to internal implementation.
+// File: PrivateExample.java
+public class PrivateExample {
+    private String secret = "This is a private message.";
+
+    private void displaySecret() {
+        System.out.println(secret);
+    }
+
+    public void showSecret() {
+        displaySecret(); // Indirect access to private method
+    }
+}
+
+// File: Main.java
+public class Main {
+    public static void main(String[] args) {
+        PrivateExample example = new PrivateExample();
+        example.showSecret(); // Output: This is a private message.
+        // example.displaySecret(); // Error: displaySecret() has private access
+    }
+}
