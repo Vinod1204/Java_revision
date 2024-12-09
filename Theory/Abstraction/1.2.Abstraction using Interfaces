@@ -1,0 +1,53 @@
+Interface is a completely abstract class that can only contain abstract methods.
+
+Example:
+interface Vechile
+{
+     void Start();
+     void Stop();  
+}
+class Car implements Vechile
+{
+    @Override
+    public void Start()
+    {
+        System.out.println("Car is starting with the key..");
+    }
+    @Override
+    public void Stop()
+    {
+        System.out.println("Vehicle is stopping...");
+    }
+}
+class Bike implements Vechile
+{
+    @Override
+    public void Start(){
+    System.out.println("Bike is starting with the kick..");
+    }
+    @Override
+    public void Stop()
+    {
+        System.out.println("Vehicle is stopping...");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Vechile myCar=new Car();
+		myCar.Start();
+		myCar.Stop();
+		
+		Vechile myBike=new Bike();
+		myBike.Start();
+		myBike.Stop();
+	}
+}
+
+o/p:
+Hello World
+Car is starting eith the key..
+Vehicle is stopping...
+Bike is starting with the kick..
+Vehicle is stopping…
