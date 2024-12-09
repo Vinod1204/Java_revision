@@ -1,0 +1,31 @@
+A default constructor has no parameters.
+If you don’t define any constructor, Java automatically provides a no-argument default constructor.
+
+class Person {
+    String name;
+    int age;
+
+    // Default Constructor
+    public Person() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Method to display details
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object using the default constructor
+        Person person = new Person();
+        person.displayDetails();
+    }
+}
+
+Output:
+Name: Unknown
+Age: 0
