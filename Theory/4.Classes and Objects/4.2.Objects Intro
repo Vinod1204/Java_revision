@@ -1,0 +1,6 @@
+Objects:
+Instance of a class.
+When you create an object, you allocate memory for the class and assign values to its fields.
+
+1.	An object is a real-world entity, like a car, dog or book.
+2.	It has state (data stored in fields) and behavior ( methods).
