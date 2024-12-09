@@ -1,0 +1,22 @@
+Scope: Accessible only within the same package.
+Usage: Used when you want to restrict access to only classes in the same package.
+
+// File: DefaultExample.java
+package somepackage;
+
+class DefaultExample {
+    void showMessage() {
+        System.out.println("This is a default access message.");
+    }
+}
+
+// File: Main.java (same package)
+package somepackage;
+
+public class Main {
+    public static void main(String[] args) {
+        DefaultExample example = new DefaultExample();
+        example.showMessage(); // Output: This is a default access message.
+    }
+}
+If you try to access DefaultExample from another package, it will result in a compile-time error.
