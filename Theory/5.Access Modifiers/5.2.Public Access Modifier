@@ -1,0 +1,21 @@
+Scope: Accessible from anywhere (same or different package).
+Usage: Used when you want your class, method, or field to be globally accessible.
+
+// File: PublicExample.java
+public class PublicExample {
+    public String message = "This is a public message.";
+
+    public void displayMessage() {
+        System.out.println(message);
+    }
+}
+
+// File: Main.java (different package)
+import somepackage.PublicExample;
+
+public class Main {
+    public static void main(String[] args) {
+        PublicExample example = new PublicExample();
+        example.displayMessage(); // Output: This is a public message.
+    }
+}
