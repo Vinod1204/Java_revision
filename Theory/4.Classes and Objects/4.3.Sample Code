@@ -1,0 +1,45 @@
+// Class definition
+class Person {
+    // Fields
+    String name;
+    int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to display person's details
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    // Method to check if the person is an adult
+    public boolean isAdult() {
+        return age >= 18;
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects of the Person class
+        Person person1 = new Person("Alice", 25);
+        Person person2 = new Person("Bob", 15);
+
+        // Calling methods on the objects
+        person1.displayInfo();
+        System.out.println("Is Alice an adult? " + person1.isAdult());
+
+        person2.displayInfo();
+        System.out.println("Is Bob an adult? " + person2.isAdult());
+    }
+}
+Name: Alice
+Age: 25
+Is Alice an adult? true
+Name: Bob
+Age: 15
+Is Bob an adult? False
