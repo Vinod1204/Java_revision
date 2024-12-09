@@ -1,0 +1,46 @@
+Deep Copy creates a new object and also recursively clones all the object referenced by the original object.
+
+Both Original and copied objects are independent.
+
+Changes made in sub-objects in the copy do not affect the original object.
+
+Code:
+import java.util.ArrayList;
+
+class DeepCopyExample {
+    String name;
+    ArrayList<String> hobbies;
+
+    public DeepCopyExample(String name, ArrayList<String> hobbies) {
+        this.name = name;
+        this.hobbies = new ArrayList<>(hobbies); // Create a new copy of the list
+    }
+
+    // Deep Copy Method
+    public DeepCopyExample deepCopy() {
+        return new DeepCopyExample(this.name, new ArrayList<>(this.hobbies)); // Clone the list
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> hobbies = new ArrayList<>();
+        hobbies.add("Reading");
+        hobbies.add("Swimming");
+
+        DeepCopyExample original = new DeepCopyExample("Alice", hobbies);
+        DeepCopyExample copy = original.deepCopy();
+
+        // Modify the hobbies list in the copy
+        copy.hobbies.add("Cycling");
+
+        System.out.println("Original hobbies: " + original.hobbies);
+        System.out.println("Copy hobbies: " + copy.hobbies);
+    }
+}
+
+Output:
+Original hobbies: [Reading, Swimming]
+Copy hobbies: [Reading, Swimming, Cycling]
+
+Explanation:The hobbies list is cloned, so modifying it in the copy does not affect the original.
