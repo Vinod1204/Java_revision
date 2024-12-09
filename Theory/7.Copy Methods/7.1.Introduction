@@ -1,2 +1,7 @@
-Deep Copy and Shallow Copy are two techniques to copy objects in Java. 
+In Java, "copy methods" refer to techniques used to create a new object as a copy of an existing object. 
+These methods are primarily used for shallow copy or deep copy, depending on the implementation.
 The key difference lies in how they handle references to objects within the object being copied.
+
+When to Use
+Shallow Copy: Use when the object does not have mutable fields or when shared references are acceptable.
+Deep Copy: Use when you want complete independence between the original and the copied object.
