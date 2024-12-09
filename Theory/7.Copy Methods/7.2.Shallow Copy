@@ -1,0 +1,48 @@
+Shallow Copy creates a new object but does not clone the objects refrenced by the original object.
+Instead, It copies the refrenced to those objects.
+
+Both Original and copied object refrenced to the same object.
+
+Characteristics:
+Changes made to mutable object within the copied object will reflected to original object. 
+
+Code:
+import java.util.ArrayList;
+
+class ShallowCopyExample {
+    String name;
+    ArrayList<String> hobbies;
+
+    public ShallowCopyExample(String name, ArrayList<String> hobbies) {
+        this.name = name;
+        this.hobbies = hobbies;
+    }
+
+    // Shallow Copy Method
+    public ShallowCopyExample shallowCopy() {
+        return new ShallowCopyExample(this.name, this.hobbies); // Same reference for `hobbies`
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> hobbies = new ArrayList<>();
+        hobbies.add("Reading");
+        hobbies.add("Swimming");
+
+        ShallowCopyExample original = new ShallowCopyExample("Alice", hobbies);
+        ShallowCopyExample copy = original.shallowCopy();
+
+        // Modify the hobbies list in the copy
+        copy.hobbies.add("Cycling");
+
+        System.out.println("Original hobbies: " + original.hobbies);
+        System.out.println("Copy hobbies: " + copy.hobbies);
+    }
+}
+
+Output:
+Original hobbies: [Reading, Swimming, Cycling]
+Copy hobbies: [Reading, Swimming, Cycling]
+
+Explanation: The hobbies list is shared between original and copy. Modifying it in one affects the other.
