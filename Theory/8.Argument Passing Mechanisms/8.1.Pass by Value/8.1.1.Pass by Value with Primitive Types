@@ -1,0 +1,26 @@
+Copy of actual value of the original value is passed to the method.
+
+Modification mae inside the method does not affect the original value.
+
+Code:
+class PassByValue {
+    public static void modifyValue(int num) {
+        num = 50; // Modify local copy
+        System.out.println("Inside method: num = " + num);
+    }
+
+    public static void main(String[] args) {
+        int x = 10;
+        System.out.println("Before method call: x = " + x);
+        modifyValue(x);
+        System.out.println("After method call: x = " + x);
+    }
+}
+
+Output:
+Before method call: x = 10
+Inside method: num = 50
+After method call: x = 10
+
+Explanation:
+The value of x remains unchanged because Java passes a copy of x to the method.
