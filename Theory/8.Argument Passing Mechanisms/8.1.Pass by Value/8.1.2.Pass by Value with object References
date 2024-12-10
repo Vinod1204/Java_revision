@@ -1,0 +1,28 @@
+
+Code:
+class PassByReference {
+    String name;
+
+    PassByReference(String name) {
+        this.name = name;
+    }
+
+    public static void modifyObject(PassByReference obj) {
+        obj.name = "Modified"; // Changes the property of the object
+        System.out.println("Inside method: name = " + obj.name);
+    }
+
+    public static void main(String[] args) {
+        PassByReference obj = new PassByReference("Original");
+        System.out.println("Before method call: name = " + obj.name);
+        modifyObject(obj);
+        System.out.println("After method call: name = " + obj.name);
+    }
+}
+
+Output:
+Before method call: name = Original
+Inside method: name = Modified
+After method call: name = Modified
+
+Explanation: the referenced to obj is passed by value.since the method uses the same reference it modify's the object.
