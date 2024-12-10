@@ -1,0 +1,5 @@
+
+**********not supported in Java*************
+
+While Java appears to use pass by reference for objects, it's only passing a copy of the reference by value. 
+The original object’s state can be modified, but the reference itself cannot be reassigned.
