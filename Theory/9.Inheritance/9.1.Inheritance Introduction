@@ -1,0 +1,12 @@
+Fundamental concepts in Object oriented Programming(OOP).
+Where one class( child or sub class ) acquires the properties ( fields) and methods of another class( parent or superclass)
+
+It promotes code reusability and establish the relationship between the classes
+
+Key features:
+The extend keyword is used to establish the Inheritance.
+The subclass inherits all the public and protected members of the supercalss does not inherit the private members.
+
+A subclass can inherits members directly.
+A subclass can override methods from the parent class to specific behavior.
+
