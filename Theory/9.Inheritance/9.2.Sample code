@@ -1,0 +1,29 @@
+
+Code:
+class Animal { // Parent Class
+    String name;
+
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+}
+
+class Dog extends Animal { // Child Class
+    public void bark() {
+        System.out.println(name + " is barking.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.name = "Buddy"; // Access inherited field
+        dog.eat(); // Call inherited method
+        dog.bark(); // Call subclass method
+    }
+}
+
+Output:
+Buddy is eating.
+Buddy is barking.
+
