@@ -1,0 +1,29 @@
+Code:
+class ReassignReference {
+    String name;
+
+    ReassignReference(String name) {
+        this.name = name;
+    }
+
+    public static void changeReference(ReassignReference obj) {
+        obj = new ReassignReference("New Object"); // Reassigns the local reference
+        System.out.println("Inside method: obj.name = " + obj.name);
+    }
+
+    public static void main(String[] args) {
+        ReassignReference obj = new ReassignReference("Original Object");
+        System.out.println("Before method call: obj.name = " + obj.name);
+        changeReference(obj);
+        System.out.println("After method call: obj.name = " + obj.name);
+    }
+}
+
+Output:
+Before method call: obj.name = Original Object
+Inside method: obj.name = New Object
+After method call: obj.name = Original Object
+
+Explanation:
+A new object is created inside the method and assigned to the local variable.
+The original reference remains unchanged.
