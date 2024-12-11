@@ -1,0 +1,35 @@
+Code:
+class Animal {
+    String name;
+
+    // Parent class constructor
+    public Animal(String name) {
+        this.name = name;
+        System.out.println("Animal Constructor: " + name);
+    }
+}
+
+class Dog extends Animal {
+    String breed;
+
+    // Subclass constructor
+    public Dog(String name, String breed) {
+        super(name); // Calls the parent class constructor
+        this.breed = breed;
+        System.out.println("Dog Constructor: " + breed);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy", "Golden Retriever");
+    }
+}
+
+Output:
+Animal Constructor: Buddy
+Dog Constructor: Golden Retriever
+
+Explanation:
+The super() keyword in dog class constructor ensures the Animal() class cl=onstructor is called first.
+This establishes the clear intialization from the parent to the child class.
