@@ -1,0 +1,4 @@
+Polymorphism in object-oriented programming refers to the abiility of a single function, method, operator to bhave differetly based on the context in which it is used.
+Polymorphism is classified into two main types:
+1.Compile time polymorphism ( static polymorphism )
+2.Run time polymorphism ( Dynamic polymorphism ) 
