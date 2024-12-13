@@ -1,0 +1,9 @@
+Polymorphism: Ability to take many forms.
+
+Compile-Time Polymorphism: Achieved via method overloading. The method to invoke is determined at compile time.
+
+Runtime Polymorphism: Achieved via method overriding. The method to invoke is determined at runtime.
+
+Method Overloading: Same method name, different parameters.
+
+Method Overriding: Same method signature in the parent and child classes.
