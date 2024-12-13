@@ -1,0 +1,38 @@
+Definition:
+
+Compile time polymorphism is achieved by method overloading or operator overloading.
+It allows a class to have mutliple methods with a same name with different parameters(type, number , order of parameters).
+The method to be called is determined at compile time.
+
+Code :
+class Calculator {
+    // Method with two parameters
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method with three parameters
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Method with double parameters
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(5, 10));           // Calls method with two int parameters
+        System.out.println(calc.add(5, 10, 15));      // Calls method with three int parameters
+        System.out.println(calc.add(5.5, 10.5));      // Calls method with two double parameters
+    }
+}
+
+Output:
+15
+30
+16.0
+
