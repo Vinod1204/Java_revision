@@ -1,6 +1,6 @@
 Copy of actual value of the original value is passed to the method.
 
-Modification mae inside the method does not affect the original value.
+Modification made inside the method does not affect the original value.
 
 Code:
 class PassByValue {
