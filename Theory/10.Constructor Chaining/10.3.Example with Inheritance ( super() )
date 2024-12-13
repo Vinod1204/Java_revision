@@ -31,5 +31,5 @@ Animal Constructor: Buddy
 Dog Constructor: Golden Retriever
 
 Explanation:
-The super() keyword in dog class constructor ensures the Animal() class cl=onstructor is called first.
+The super() keyword in Dog class constructor ensures the Animal class constructor is called first.
 This establishes the clear intialization from the parent to the child class.
