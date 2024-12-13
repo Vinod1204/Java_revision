@@ -1,0 +1,10 @@
+Unlike languages such as C++, Java does not support operator overloading. 
+However, some operators (like +) can behave differently in Java (e.g., for addition and string concatenation).
+
+Code:
+
+int a = 5, b = 10;
+String s1 = "Hello", s2 = "World";
+
+System.out.println(a + b);       // Outputs: 15 (Addition)
+System.out.println(s1 + s2);     // Outputs: HelloWorld (Concatenation)
