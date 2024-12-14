@@ -1,0 +1,4 @@
+Definition:
+Static method in class belongs to class rather than to any specific instance of a class.
+We can call static method without creating the new object.
+Declared using Static word.
