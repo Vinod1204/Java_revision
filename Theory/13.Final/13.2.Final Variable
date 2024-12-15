@@ -1,0 +1,34 @@
+Final Variable is constant,once assigned a variable it cannot be changed.
+Characteristics:
+1.Cannot Be Reassigned
+2.Must Be Initialized
+3.Used for Constants
+
+Code:
+class FinalVariableExample {
+    final int CONSTANT = 100; // Must be initialized during declaration
+
+    final int anotherConstant; // Can be initialized in a constructor
+
+    FinalVariableExample() {
+        anotherConstant = 200; // Initialization in the constructor
+    }
+
+    public void demonstrate() {
+        // CONSTANT = 300; // Compilation Error: Cannot reassign a final variable
+        System.out.println("CONSTANT: " + CONSTANT);
+        System.out.println("anotherConstant: " + anotherConstant);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        FinalVariableExample example = new FinalVariableExample();
+        example.demonstrate();
+    }
+}
+
+Output:
+CONSTANT: 100
+anotherConstant: 200
+
