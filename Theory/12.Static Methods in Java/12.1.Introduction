@@ -1,4 +1,11 @@
 Definition:
 Static method in class belongs to class rather than to any specific instance of a class.
 We can call static method without creating the new object.
-Declared using Static word.
+Declared using Static Keyword.
+
+Characteristics of Static methods:
+1.Belong to the class : They are associated with the class not to any object.
+2.Access restrictions:
+  * Can be directly access to other static members(fields or methods) in the class.
+  * Cannot directly access to instance varaibles or methods of non-static because they do not belong to any instance.
+3.Useful for utility:Used for utility or helper methods,such asa mathematical calculations ( eg: Math.pow() ). 
