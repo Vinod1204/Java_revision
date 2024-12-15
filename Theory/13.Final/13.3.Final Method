@@ -1,0 +1,31 @@
+Definition:
+Final method cannot be overridden by subclass.
+This ensures that behavior of the method remains consistent across all subclass.
+
+Chararteristics:
+Prevent Overridden.
+Inheritence allowed -> method cannot be modified.( Compilation Error )
+
+Code:
+class ParentClass {
+    final void displayMessage() {
+        System.out.println("This is a final method from ParentClass.");
+    }
+}
+
+class ChildClass extends ParentClass {
+    // Attempt to override the final method will cause a Compilation Error
+    // void displayMessage() {
+    //     System.out.println("Trying to override final method.");
+    // }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ChildClass obj = new ChildClass();
+        obj.displayMessage(); // Calls the final method from ParentClass
+    }
+}
+
+Output:
+This is a final method from ParentClass.
