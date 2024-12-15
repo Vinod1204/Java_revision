@@ -1,0 +1,24 @@
+Definition:
+Final class cannot be subclass.
+Used when no subclass is needed, ensuring its behavior remains unchanged.
+
+Code:
+final class FinalClass {
+    void showMessage() {
+        System.out.println("This is a method from a final class.");
+    }
+}
+
+// Attempting to inherit the final class will cause a Compilation Error
+// class SubClass extends FinalClass {
+// }
+
+public class Main {
+    public static void main(String[] args) {
+        FinalClass obj = new FinalClass();
+        obj.showMessage(); // Directly using the final class
+    }
+}
+
+Output:
+This is a method from a final class.
