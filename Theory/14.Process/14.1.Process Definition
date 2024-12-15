@@ -1,0 +1,29 @@
+Process is a indepedent in execution, it will not share the memory and resources with other process.
+Each process run its own memory space, one process cannot du=irectly access to the other process.
+Inter process communication is required to share between process.
+
+Characteristics of Process:
+1.Independent execution.
+2.Heavy Weight
+3.Memory Isolation
+4.Inter process communication
+5.Running two java programs on your machine create two separate process.They do not share memory or resources directly.
+
+Program 1:
+public class Process1 {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Process 1: " + i);
+        }
+    }
+}
+
+Program 2:
+public class Process2 {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Process 2: " + i);
+        }
+    }
+}
+When you run these two programs, each program creates a separate process. They do not share memory or resources directly.
