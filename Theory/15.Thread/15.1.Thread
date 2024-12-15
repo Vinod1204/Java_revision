@@ -1,0 +1,58 @@
+Definition:
+Thread is a lightweight unit of execution of process.
+Threads within the same process shares the same memory and resources allowing for efficient communication and data sharing.
+A single process have multiple threads.
+
+Characteristics of a Thread:
+Shared Memory: Threads in the same process share the same memory space.
+Lightweight: Threads require less overhead than processes.
+Concurrent Execution: Multiple threads can execute concurrently within the same process.
+Communication: Threads communicate directly because they share memory.
+Example: Running multiple tasks within the same program using threads.
+
+Code:
+class Task extends Thread {
+    private String name;
+
+    public Task(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println(name + ": " + i);
+            try {
+                Thread.sleep(500); // Simulate some work
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+        // Creating two threads
+        Task thread1 = new Task("Thread 1");
+        Task thread2 = new Task("Thread 2");
+
+        // Starting the threads
+        thread1.start();
+        thread2.start();
+    }
+}
+
+Output:
+Thread 1: 0
+Thread 2: 0
+Thread 1: 1
+Thread 2: 1
+Thread 1: 2
+Thread 2: 2
+...
+
+Explanation:
+
+Both Thread 1 and Thread 2 are running concurrently within the same process.
+They share the same memory space but have separate execution flows.
