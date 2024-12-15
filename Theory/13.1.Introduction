@@ -1,0 +1,8 @@
+The final keyword is used to restrict the behaviour of varaibles,methods and classes.
+
+Types:
+*Final Variable -> Used to define constants ( final double PI=3.14 )
+*Final Method   -> Used when method's implementation is critical should not be overridden.
+*Final Class    -> Used for utility clases like java.lang.String to prevent modification through inheritance.
+
+
