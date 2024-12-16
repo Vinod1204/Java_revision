@@ -1,0 +1,6 @@
+
+Multicore Systems
+A multicore system is a type of computer architecture where a single processor contains multiple processing cores (CPUs). 
+Each core is capable of performing independent tasks or collaborating on the same task, enabling parallel processing.
+
+This architecture improves performance, energy efficiency, and the ability to handle multiple tasks simultaneously.
