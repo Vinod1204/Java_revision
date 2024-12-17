@@ -1,5 +1,5 @@
 Process is a indepedent in execution, it will not share the memory and resources with other process.
-Each process run its own memory space, one process cannot du=irectly access to the other process.
+Each process run its own memory space, one process cannot directly access to the other process.
 Inter process communication is required to share between process.
 
 Characteristics of Process:
