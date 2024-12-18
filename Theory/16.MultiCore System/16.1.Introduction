@@ -4,3 +4,6 @@ A multicore system is a type of computer architecture where a single processor c
 Each core is capable of performing independent tasks or collaborating on the same task, enabling parallel processing.
 
 This architecture improves performance, energy efficiency, and the ability to handle multiple tasks simultaneously.
+
+Multi core system uses multiple processor cores to execute the tasks concurrently, improving the performance and responsiveness of application.
+Java provides tools and libaries to effectively utilize the multicore system for parallelism and concurrency.
