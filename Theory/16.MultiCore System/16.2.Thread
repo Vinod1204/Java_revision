@@ -1,0 +1,26 @@
+Threads are the basic units of execution in Java.
+Multiple threads can trun concurrently on different cores on multicore system.
+
+Code:
+class MyTask extends Thread {
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + " is running");
+    }
+}
+
+public class MulticoreExample {
+    public static void main(String[] args) {
+        MyTask task1 = new MyTask();
+        MyTask task2 = new MyTask();
+
+        task1.start(); // Executes on one core
+        task2.start(); // Executes on another core
+    }
+}
+
+Output:
+Thread-0 is running
+Thread-1 is running
+
+Explanation:
+The start() method creates new threads that can execute concurrently on different cores.
