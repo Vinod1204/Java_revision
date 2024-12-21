@@ -1,0 +1,38 @@
+Introduction:
+Provides high level concurrency constructs like thread pools for managing threads efficiently.
+
+Code:
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExecutorExample {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(4); // Pool with 4 threads
+
+        Runnable task = () -> {
+            System.out.println(Thread.currentThread().getName() + " is executing");
+        };
+
+        for (int i = 0; i < 10; i++) {
+            executor.execute(task); // Assigns tasks to threads
+        }
+
+        executor.shutdown();
+    }
+}
+
+Output:
+pool-1-thread-2 is executing
+pool-1-thread-2 is executing
+pool-1-thread-2 is executing
+pool-1-thread-2 is executing
+pool-1-thread-4 is executing
+pool-1-thread-4 is executing
+pool-1-thread-2 is executing
+pool-1-thread-4 is executing
+pool-1-thread-3 is executing
+pool-1-thread-1 is executing
+
+Explanation:
+Thread pool manages the group of reusable threads.
+Tasks are distrbuted across threads which will run on different cores.
