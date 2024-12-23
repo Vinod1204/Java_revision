@@ -1,0 +1,20 @@
+Introduction:
+Part of java'8 Stream API, parallel stream automatically divide tasks and execute them in parallel on multicore processors.
+
+Code:
+import java.util.stream.IntStream;
+
+public class ParallelStreamExample {
+    public static void main(String[] args) {
+        int sum = IntStream.range(1, 101)
+                .parallel()
+                .sum();
+
+        System.out.println("Sum: " + sum); // Output: 5050
+    }
+}
+
+Output: 
+5050
+
+Explanation: The .parallel() method divides the range into parts that execute concurrently across multiple cores.
