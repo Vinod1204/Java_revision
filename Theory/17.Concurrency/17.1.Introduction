@@ -1,0 +1,3 @@
+Definition:
+Concurrency is about managing multiple tasks simultaneously.
+Tasks may not actually run at the same time but make progress by interleaving execution (time-slicing) on a single or multiple cores.
