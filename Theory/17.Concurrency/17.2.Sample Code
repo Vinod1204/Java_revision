@@ -1,0 +1,54 @@
+Concurrency example ( Time slicing on a single core )
+Code:
+public class ConcurrencyExample {
+    public static void main(String[] args) {
+        Runnable task1=new Runnable()
+		{
+		 @Override
+		 public void run()
+		 {
+		     for(int i=0;i<5;i++)
+		     {
+		         System.out.println("Task1 - step "+i);
+		         try
+		         {
+		             Thread.sleep(100);
+		         }
+		         catch(InterruptedException e)
+		         {
+		             e.printStackTrace();
+		         }
+		     }
+		 }
+		};
+
+        Runnable task2 = () -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Task 2 - Step " + i);
+                try {
+                    Thread.sleep(100); // Simulates work
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        Thread thread1 = new Thread(task1);
+        Thread thread2 = new Thread(task2);
+
+        thread1.start();
+        thread2.start();
+    }
+}
+Output:
+Task 1 - Step 0
+Task 2 - Step 0
+Task 1 - Step 1
+Task 2 - Step 1
+Task 1 - Step 2
+Task 2 - Step 2
+...
+
+Explanation:
+The tasks are executed concurrently.
+Threads take turns running on the same core, giving the illusion of simultaneous execution.
