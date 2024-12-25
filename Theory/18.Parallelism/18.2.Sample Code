@@ -1,0 +1,28 @@
+Code:
+import java.util.stream.IntStream;
+
+public class ParallelismExample {
+    public static void main(String[] args) {
+        IntStream.range(1, 11)
+                .parallel()
+                .forEach(i -> {
+                    System.out.println("Processing number: " + i + " in thread: " + Thread.currentThread().getName());
+                });
+    }
+}
+
+Output:
+Processing number 9 in Thread ForkJoinPool.commonPool-worker-7
+Processing number 10 in Thread ForkJoinPool.commonPool-worker-7
+Processing number 8 in Thread ForkJoinPool.commonPool-worker-7
+Processing number 6 in Thread ForkJoinPool.commonPool-worker-7
+Processing number 1 in Thread ForkJoinPool.commonPool-worker-7
+Processing number 5 in Thread ForkJoinPool.commonPool-worker-7
+Processing number 4 in Thread ForkJoinPool.commonPool-worker-7
+Processing number 2 in Thread ForkJoinPool.commonPool-worker-5
+Processing number 3 in Thread ForkJoinPool.commonPool-worker-3
+Processing number 7 in Thread main
+
+Explanation:
+.parallel() divides the task (processing numbers) among multiple threads.
+Tasks execute on different cores simultaneously for faster computation.
