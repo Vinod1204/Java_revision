@@ -1,0 +1,10 @@
+Definition:
+Context switch occurs when CPU switches from one thread to another.
+It involves the saving the state of current executing thread and loading the state of next thread to be executed.
+
+This switching allows multiple threads to share the CPU and makes it seem like they are running simultaneously, even on a single-core processor.
+
+Steps in Context Switching
+Save State: The state of the current thread (like registers, program counter, etc.) is saved.
+Load State: The state of the new thread is loaded.
+Execution: The CPU starts executing the new thread.
