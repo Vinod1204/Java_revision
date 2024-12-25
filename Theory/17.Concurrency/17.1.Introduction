@@ -1,3 +1,10 @@
 Definition:
 Concurrency is about managing multiple tasks simultaneously.
 Tasks may not actually run at the same time but make progress by interleaving execution (time-slicing) on a single or multiple cores.
+
+Analogy: Single chef working on multiple dishes,switching between them to make progress on all.
+
+Use Concurrency:
+When you need tasks to interact (e.g., producer-consumer patterns).
+For responsive user interfaces or managing background tasks.
+Example: A server handling multiple client requests simultaneously.
