@@ -1,0 +1,11 @@
+
+Definition:
+Executing multiple tasks simultaneously using multiple cores in a multicore processors.
+Speeding up task completion by dividing and executing the task  at the same time.
+
+Analogy: Multiple chefs working on different dishes on same time.
+
+Use Parallelism:
+When tasks can run independently and you need to speed up execution.
+For data processing tasks that benefit from splitting workloads.
+Example: Performing mathematical computations on large datasets.
