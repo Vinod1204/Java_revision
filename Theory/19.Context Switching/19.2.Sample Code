@@ -1,0 +1,43 @@
+Code:
+public class ContextSwitchingDemo {
+    public static void main(String[] args) {
+        Runnable task1 = () -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Task 1 - Step " + i);
+                try {
+                    Thread.sleep(100); // Simulates some work
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        Runnable task2 = () -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Task 2 - Step " + i);
+                try {
+                    Thread.sleep(100); // Simulates some work
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        Thread thread1 = new Thread(task1);
+        Thread thread2 = new Thread(task2);
+
+        thread1.start();
+        thread2.start();
+    }
+}
+
+Output:
+Task 1 - Step 0
+Task 2 - Step 0
+Task 1 - Step 1
+Task 2 - Step 1
+Task 1 - Step 2
+Task 2 - Step 2
+...
+
+Explanation:The exact order depends on the thread scheduler and context switching.
