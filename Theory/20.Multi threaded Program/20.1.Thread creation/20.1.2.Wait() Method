@@ -1,0 +1,6 @@
+Defintion:
+Used for thread communication.
+Causes current thread to release the monitor and wait until another thread calls notify() or notifyAll() on the same object.
+
+Note : Must be called within synchronized method otherwise it will throw IllegalMonitorStateException.
+
