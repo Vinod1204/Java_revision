@@ -1,0 +1,60 @@
+***Definition***
+Collection of worker threads that effectivitly execute multiple task asynchronously.
+Using the thread pool we can manage and reuse the thread, instead of creating a new thread for eack task.
+
+Java provides the ThreadPoolExecutor class and several utility methods in Executors class in Java to manage threads.
+This allow easier management for thread creation and task scheduling.
+
+Key concepts:
+Thread Pool: A pool of threads that are created ahead of time and resued to execute task.
+Task Queue : When there are more task in thread, the task are placed in queue for future execution.
+Idle Threads: After completing a task, thread is either kept alive to execute future task or terminated afer being idle for a certain time.
+
+***Advantages***
+●Saves thread creation time, which improves performance.
+●Removes the overhead of managing the thread life cycle, as the executor framework handles this.
+●Increases performance by controlling the number of threads created, which reduces context switching and allows the CPU to spend more time processing.
+The video explains the ThreadPoolExecutor constructor and the purpose of each parameter:
+●
+corePoolSize: The number of threads initially created and kept in the pool, even if they are idle.
+●
+allowCoreThreadTimeOut: If set to true, idle threads will be terminated after the keepAliveTime.
+●
+keepAliveTime: The duration for which idle threads are kept alive. This is only used if allowCoreThreadTimeOut is set to true.
+●
+unit: The time unit for keepAliveTime (e.g., milliseconds, seconds, minutes).
+●
+maximumPoolSize: The maximum number of threads allowed in the pool. New threads are only created when the queue is full and the number of threads in the pool is less than the maximumPoolSize.
+●
+workQueue: A BlockingQueue used to hold tasks before they are picked up by worker threads. There are two types: bounded (fixed capacity) and unbounded (no fixed capacity). Bounded queues are generally preferred.
+●
+threadFactory: Provides an interface to customize thread name, priority, and demon flag.
+●
+rejectedExecutionHandler: A handler for tasks that cannot be accepted by the thread pool because the queue is full and the maximumPoolSize has been reached. There are four built-in types: AbortPolicy, DiscardPolicy, CallerRunsPolicy, and DiscardOldestPolicy. Custom handlers can also be created.
+
+
+
+When a new task is submitted:
+1.The executor checks if any thread is free in the pool. If yes, the task is assigned to that thread.
+
+2.If all threads are busy, the task is added to the queue.
+
+3.If the queue is full, the executor checks if it can create a new thread (up to the maximumPoolSize). If yes, a new thread is created and assigned the task.
+
+4.If the queue is full and the maximumPoolSize has been reached, the task is rejected, and the rejectedExecutionHandler is used to handle it.
+
+
+
+*****Core Components of a Thread Pool*****
+ExecutorService:
+The primary interface for managing and controlling thread pools. Common implementations are:
+ThreadPoolExecutor
+ScheduledThreadPoolExecutor
+Executors:
+A utility class that provides factory methods to create different types of thread pools, such as:
+newFixedThreadPool(int nThreads)
+newCachedThreadPool()
+newSingleThreadExecutor()
+
+
+-----------------------------------------------------------------------------------------------------------
