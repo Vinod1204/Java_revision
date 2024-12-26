@@ -1,0 +1,40 @@
+Defintion:
+1. start() Method
+The start() method begins the execution of a thread by calling its run() method.
+It creates a new call stack for the thread.
+Important: Directly calling run() will not start a new thread; it runs the run() method in the current thread.
+
+Code:
+
+Output:
+// Using Thread Class
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running: " + Thread.currentThread().getName());
+    }
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start(); // Starts the thread and calls run()
+    }
+}
+
+// Using Runnable Interface
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running: " + Thread.currentThread().getName());
+    }
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new MyRunnable());
+        t1.start();
+    }
+}
+
+
+
+
