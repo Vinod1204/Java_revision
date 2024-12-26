@@ -1,0 +1,33 @@
+***Definition***
+The lifecycle of a thread in java consists of several states.
+This states defines the behavior of the thread from its creation to termination.
+Thread class provides the control and monitor the thread's lifecycle.
+
+Threads states:
+1.New (created):
+.A thread is in the NEW state when it is created but not yet started.
+.Created using thread class or implementing using Runnable interface.
+
+2.Runnable:
+After calling start(), the thread enters the Runnable state.
+The thread is eligible for executio by the CPI but may not be immediately running.
+
+3.Running 
+When the thread scheduler picks the thread from the Runnable pool, the thread enters the running state.
+
+4.Blocked/Waiting/Timed waiting:
+The thread can move to one of these states when waiting for resources or signals:
+Blocked: Waiting to acquire a lock on an object.
+Waiting: Indefinitely waiting for another thread's signal.
+Timed Waiting: Waiting for a specified amount of time (e.g., using sleep() or join() with a timeout).
+Terminated (Dead):
+
+Once the thread finishes execution or is explicitly stopped, it enters the TERMINATED state.
+
+
+Thread Lifecycle Diagram:
+New --> Runnable --> Running --> Terminated
+           ^           |
+           |           v
+        Blocked/Waiting/Timed waiting
+
