@@ -4,3 +4,39 @@ Causes current thread to release the monitor and wait until another thread calls
 
 Note : Must be called within synchronized method otherwise it will throw IllegalMonitorStateException.
 
+Code:
+class SharedResource {
+    public synchronized void waitForSignal() {
+        try {
+            System.out.println("Waiting...");
+            wait(); // Releases the lock and waits
+            System.out.println("Resumed after notify");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public synchronized void sendSignal() {
+        System.out.println("Sending notify signal...");
+        notify(); // Wakes up one waiting thread
+    }
+}
+
+public class WaitNotifyExample {
+    public static void main(String[] args) {
+        SharedResource resource = new SharedResource();
+
+        Thread t1 = new Thread(resource::waitForSignal);
+        Thread t2 = new Thread(resource::sendSignal);
+
+        t1.start();
+        try { Thread.sleep(100); } catch (InterruptedException e) {}
+        t2.start();
+    }
+}
+
+Output:
+Waiting...
+Sending notify signal...
+Resumed after notify
+
