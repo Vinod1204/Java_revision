@@ -1,0 +1,20 @@
+*********Definition**********
+
+Future in java is an object the represents the result of an asynchronous computation.
+Placeholder for the result that will be computed in the future.
+Futures are typically used with tasks submitted to an ExecutorService.
+
+Key features of future:
+1.Asynchronous Execution:
+Task are executed in the background, allowing the main thread to continue its execution.
+
+2.Result Retrievel:
+Use the get() method to retrievelthe result, this blocks until the computation is complete.
+
+3.Cancel Task:
+Use cancel() to cancel the task.
+
+4.Check Completion
+isDone() to check if the task is complete.
+isCancelled() to check if the task was cancelled.
+

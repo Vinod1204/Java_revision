@@ -1,0 +1,21 @@
+********Definition**********
+Used to mark a variable as "read directly from memory" instead of relying on cached values on CPU registers or Threads memory.
+It ensures visiblilty and ordering across threads.
+
+Key Characteristics of volatile
+Visibility:
+Changes made to a volatile variable by one thread are visible to all other threads immediately.
+
+Atomicity:
+Operations like reading or writing a volatile variable are atomic. However, compound actions (e.g., x++) are not atomic.
+
+No Caching:
+The volatile variable is always read from main memory, avoiding stale values.
+
+No Synchronization:
+It doesn't require explicit synchronization but provides lightweight thread communication.
+
+When to Use volatile:
+When a variable is shared between threads.
+When the variable is only modified using simple operations (read/write).
+As a lightweight alternative to synchronization for specific use cases.
