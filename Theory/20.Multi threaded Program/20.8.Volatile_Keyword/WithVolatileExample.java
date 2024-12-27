@@ -35,3 +35,7 @@ public class WithVolatileExample
         t2.start();
     }
 }
+
+/*
+ * 
+ */

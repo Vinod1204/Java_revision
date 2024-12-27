@@ -35,3 +35,17 @@ public class WithoutVolatileExample
         t2.start();
     }
 }
+
+/*
+ * Output
+ *  Increasing counter value 1
+ Increasing counter value 2
+ Increasing counter value 3
+ Increasing counter value 4
+ Increasing counter value 5
+ Increasing counter value 6
+ Increasing counter value 7
+ Increasing counter value 8
+ Increasing counter value 9
+ Increasing counter value 10
+ */
