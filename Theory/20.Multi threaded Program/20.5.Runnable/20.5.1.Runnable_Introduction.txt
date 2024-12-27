@@ -1,0 +1,36 @@
+Definition:
+
+Runnable is a functional interface with a single method, run().
+It does not return a result and cannot throw checked exceptions.
+
+Purpose:
+For defining tasks that do not need to return a result or throw exceptions.
+
+Usage:
+Typically used with Thread or Executor classes.
+
+Code Example:
+public class RunnableExample {
+    public static void main(String[] args) {
+        // Create a Runnable task
+        Runnable task = () -> {
+            System.out.println("Runnable task is running by thread: " + Thread.currentThread().getName());
+        };
+
+        // Run the task using a Thread
+        Thread thread = new Thread(task);
+        thread.start();
+
+        // Run the task using an ExecutorService
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.execute(task);
+
+        // Shutdown the executor
+        executor.shutdown();
+    }
+}
+
+Key Points:
+
+The task has no return value.
+Cannot directly throw checked exceptions (must handle them internally).

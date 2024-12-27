@@ -1,0 +1,17 @@
+Definition:
+
+Callable is a generic functional interface with a single method, call().
+It returns a result and can throw checked exceptions.
+
+Purpose:
+For defining tasks that need to return a result or throw exceptions.
+
+Usage:
+Typically used with ExecutorService.
+
+
+Use Callable:
+When tasks are complex, need to return a result, or might throw checked exceptions.
+Example: Fetching data from a database or performing computationally intensive tasks.
+
+Callable is more flexible and designed for tasks that need to return a value or handle exceptions.
