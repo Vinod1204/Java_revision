@@ -1,0 +1,25 @@
+*****Definition*****
+The java.util.concurrent.Executors class provides a factory for creating and managing thread pools.
+Instead of managing threads manually, we can use Executors to handle thread lifecycle, task queuing and efficient resource utilization.
+
+Why Use Executors?
+Simplifies Thread Management:
+Automatically handles thread creation, execution, and termination.
+Improves Performance:
+Reuses threads in a thread pool instead of creating new ones, saving system resources.
+Scalability:
+Manages the number of active threads to optimize performance for concurrent tasks.
+
+Common Types of Executors
+Fixed Thread Pool:
+A thread pool with a fixed number of threads.
+If all threads are busy, new tasks are queued.
+
+Cached Thread Pool:
+Creates new threads as needed but reuses existing threads when available.
+
+Single Thread Executor:
+A single worker thread is used to execute tasks sequentially.
+
+Scheduled Thread Pool:
+Used to schedule tasks to run after a delay or at fixed intervals.
