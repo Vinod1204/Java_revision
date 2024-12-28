@@ -1,0 +1,19 @@
+****Definition****
+
+Synchronization is a mechanism that allows only one thread to access a critical section of code at a time,
+ensuring data consistency and preventing thread interference in a multi-threaded environment.
+
+Why Synchronization?
+In a multi-threaded application, multiple threads might access shared resources (like variables, files, or data structures) concurrently. 
+Without synchronization, race conditions might occur, leading to inconsistent or corrupted data. 
+Synchronization ensures mutual exclusion, allowing only one thread to execute a critical section at a time.
+
+Types:
+Sychronizied Method:
+The entire method is Sychronizied, only one thread is execute the Sychronizied method of the  object at a time.
+
+Sychronizied Block: 
+A specific block of code in the method is synchronizied, allows finer control by synchronizing only the critical section.
+
+Static Synchronization:
+Sychronizied methods that are static lock on the class object( class instance), affecting all  object of the class. 
