@@ -1,0 +1,32 @@
+****Definition***
+Atomic data types is a part java.util.concurrent.atomic package, desiged for thread safe operaions on single variable.
+It avoids using explicit synchronized keyword.
+This types leverage low level atomic operations ( compare and swap ) provided by the hardware, ensuring high performance in concurrent applications.
+
+Key Features of Atomic Data Types
+Thread-Safe: Operations are guaranteed to be atomic, meaning they are executed as a single, indivisible step.
+Lock-Free: Unlike synchronized blocks or locks, atomic types avoid blocking threads, leading to better performance.
+Efficient: Built using low-level hardware instructions, ensuring minimal overhead.
+
+Common Atomic Data types:
+
+AtomicInteger:
+Provides atomic operations on int values.
+Methods like incrementAndGet(), decrementAndGet() , compareAndSet()..
+AtomicLong:
+Similar to AtomicInteger, but for long values.
+AtomicBoolean:
+Provides atomic operations on boolean values.
+AtomicReference<T>:
+Provides atomic operations on objects of any type (T).
+AtomicStampedReference<v>
+Extends AtomicReference by maintaining a version stamp, useful for solving the ABA problem.
+
+Key Methods in Atomic Data Types
+Common Methods (for AtomicInteger, AtomicLong, etc.)
+get(): Retrieves the current value.
+set(value): Sets the value atomically.
+incrementAndGet(): Atomically increments the value and returns the result.
+decrementAndGet(): Atomically decrements the value and returns the result.
+addAndGet(delta): Adds a value atomically and returns the result.
+compareAndSet(expected, newValue): Atomically sets the value to newValue if the current value is expected.
