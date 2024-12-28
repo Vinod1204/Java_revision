@@ -1,0 +1,5 @@
+
+A mutex ( "Mutual Exclusion" ) is a locking mechanism used to prevent multiple thread try to accessing a shared resource simultaneuosly.
+
+Mutex behavior impleents using constructs like synchronized and ReentrantLock.
+

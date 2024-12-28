@@ -1,0 +1,3 @@
+A semaphore is a synchronization tool that restricts the number of threads that can access a resource simultaneously.
+In Java, Semaphore is part of the java.util.concurrent package.
+

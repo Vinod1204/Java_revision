@@ -1,0 +1,20 @@
+ReentrantLock in Java:
+The ReentrantLock is part of the java.util.concurrent.locks package and is an advanced locking mechanism introduced in Java 5.
+It provides more flexible and powerful locking operations compared to the traditional synchronized keyword.
+
+Key Features of ReentrantLock
+Reentrant Nature:
+A thread can acquire the same lock multiple times without causing a deadlock.
+The lock must be released the same number of times it was acquired.
+
+Explicit Locking:
+The programmer explicitly locks and unlocks the code block using lock() and unlock() methods.
+
+Try Locking:
+The tryLock() method allows a thread to attempt to acquire a lock without blocking indefinitely.
+
+Interruptible Locking:
+The lockInterruptibly() method allows a thread to be interrupted while waiting for the lock.
+
+Fair Locking:
+A fairness policy can be applied to ensure that locks are granted in the order in which threads requested them.
