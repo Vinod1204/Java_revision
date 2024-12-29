@@ -1,0 +1,35 @@
+Functional Interface in Java
+A functional interface in Java is an interface that contains exactly one abstract method. It can have:
+
+Default methods.
+Static methods.
+Methods from java.lang.Object (e.g., toString, equals, etc.).
+Functional interfaces are the foundation of lambda expressions and are commonly used in functional programming. They were introduced in Java 8.
+
+Key Characteristics:
+@FunctionalInterface Annotation:
+
+This annotation is optional but is used to indicate that an interface is a functional interface.
+If the interface does not comply (e.g., contains more than one abstract method), the compiler throws an error.
+Lambda Expressions:
+
+Lambda expressions can be used to provide the implementation of a functional interface.
+Examples:
+
+Common functional interfaces: Runnable, Callable, Comparator, Consumer, Supplier, etc.
+
+Key Built-In Functional Interfaces
+Functional Interface	 -> Abstract Method	    -> Description
+Function<T, R>           ->R apply(T t)	        ->Takes one argument and produces a result.
+Consumer<T>	             ->void accept(T t) 	->Takes one argument and performs an operation.
+Supplier<T>	             ->T get()	            ->Produces a result; takes no arguments.
+Predicate<T>	         -> boolean test(T t)	->Evaluates a condition and returns a boolean.
+BiFunction<T, U, R>	     -> R apply(T t, U u)	->Takes two arguments and produces a result.
+BinaryOperator<T>	     ->T apply(T t1, T t2)	->Operates on two of the same type and returns a result.
+
+
+Advantages of Functional Interfaces:
+
+Simplifies code by enabling the use of lambda expressions.
+Enhances readability and maintainability.
+Facilitates functional programming in Java.

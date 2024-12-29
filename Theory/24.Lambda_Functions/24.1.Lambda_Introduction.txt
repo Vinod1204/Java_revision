@@ -1,0 +1,15 @@
+Lambda Functions in Java
+Lambda functions, introduced in Java 8, are a concise way to represent anonymous functions (functions without a name).
+They allow you to write more readable and maintainable code, especially for functional-style programming.
+
+Syntax:
+
+(parameters) -> (Expressions)
+
+parameters : The input of the function can be empty if none are required.
+Arrow( -> ) Separates the parameters from the function body.
+Expression or Block : The body of the lambda can be a single statement or block of code.
+
+Key Points:
+Lambda functions are primarily used with functional interfaces (interfaces with a single abstract method).
+They can simplify code by replacing verbose anonymous inner classes.
