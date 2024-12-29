@@ -1,0 +1,20 @@
+Java Streams:
+Introduced in Java 8, the Stream API is used to process collections of data in a functional and declarative way.
+It provides operations like filtering, mapping, and reducing data, making it easier to work with collections.
+
+
+Key Characteristics of Streams:
+Sequence of Elements: Streams are sequences of elements from a source (e.g., collections, arrays).
+Functional in Nature: Operations are performed in a pipeline, where each step transforms or processes the data.
+Laziness: Streams process data lazily; operations are evaluated only when required.
+Parallelism: Streams can be executed in parallel using parallelStream().
+Immutable: Stream operations do not modify the original data source.
+
+
+Stream Operations:
+Stream operations are divided into two types:
+
+Intermediate Operations: Transform streams into another stream. 
+They are lazy and only executed when a terminal operation is invoked.
+
+Terminal Operations: Produce a result or a side effect and terminate the stream pipeline.

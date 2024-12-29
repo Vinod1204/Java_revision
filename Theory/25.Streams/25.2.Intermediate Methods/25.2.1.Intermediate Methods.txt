@@ -1,0 +1,12 @@
+Intermediate Methods:
+These methods transform a stream into another stream. 
+They are lazy, meaning no computation is performed until a terminal operation is encountered.
+
+Common Intermediate Methods:
+filter(Predicate<T>): Filters elements based on a condition.
+map(Function<T, R>): Transforms each element.
+flatMap(Function<T, Stream<R>>): Flattens nested streams into a single stream.
+distinct(): Removes duplicate elements.
+sorted(): Sorts the elements.
+limit(long n): Limits the number of elements.
+skip(long n): Skips the first n elements.

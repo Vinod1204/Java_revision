@@ -1,0 +1,28 @@
+Parallel Streams
+Parallel streams divide the data into multiple chunks and process them in parallel, utilizing the available CPU cores. 
+They are suitable for computationally intensive tasks.
+
+Creating a Parallel Stream:
+
+Using parallelStream():
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+numbers.parallelStream().forEach(System.out::println);
+
+Converting a Stream to Parallel:
+Stream<Integer> stream = numbers.stream();
+stream.parallel().forEach(System.out::println);
+
+Benefits of Parallel Streams:
+Speeds up tasks by using multiple threads.
+Automatically manages thread creation and synchronization.
+
+Important Note:
+Use Parallel Streams for Large Data: Parallelism adds overhead; for small datasets, sequential streams are often faster.
+Thread-Safety: Ensure that operations on shared resources are thread-safe when using parallel streams.
+
+When to Use Parallel Streams?
+Large datasets where processing can be divided into smaller tasks.
+Computations that are independent (e.g., calculating the square of each number).
+Avoid parallel streams for:
+Small datasets (overhead of parallelism outweighs benefits).
+State-dependent computations (thread-safety issues).

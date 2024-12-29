@@ -1,0 +1,9 @@
+Terminal Methods
+Terminal operations trigger the computation of the stream pipeline and produce a result or a side effect.
+
+Common Terminal Methods:
+forEach(Consumer<T>): Performs an action for each element.
+collect(Collector): Collects the elements into a collection or other data structure.
+reduce(BinaryOperator<T>): Reduces elements to a single value.
+count(): Counts the number of elements.
+findFirst() / findAny(): Finds the first or any element.
