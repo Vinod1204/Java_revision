@@ -1,0 +1,15 @@
+Definition:
+Generics were introducted in java 5 to provide a way to ensure a type safety while working with collections and any other types of objects.
+They allow you to define class, interface and methods as a placeholder for the type of data they operate on.
+
+Why Generics:
+1.Type safety : They prevent ClassCastException by checking types at compile time.
+2.Code Reusability : Write a single class or method that works with different datatypes.
+3.Cleaner Code : No need for explicit type casting.
+
+How Generics Work?
+Generics introduce type parameters. For example:
+
+<T> -> Represents a type parameter ( eg : String, Integer..etc)
+<k, V> -> Represents multiple type parameters ( commonly used in map)
+ 
