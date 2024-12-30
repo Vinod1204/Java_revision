@@ -1,0 +1,55 @@
+Exception Handling Keywords
+1.Try block
+Contains code that might throw an exception.
+If an exception occurs,control transfers tot he appropiate catch block.
+
+Eg:
+try {
+    int result = 10 / 0; // This will throw an ArithmeticException
+} catch (ArithmeticException e) {
+    System.out.println("Exception caught: " + e.getMessage());
+}
+
+2.Catch Block 
+Handles the exception thrown in the try block.
+Can have multiple catch blocks to handle different exceptions.
+
+Eg:
+try {
+    int[] arr = new int[3];
+    System.out.println(arr[5]); // ArrayIndexOutOfBoundsException
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Array index out of bounds: " + e.getMessage());
+}
+
+3.Finally block:
+Executes regardless of whether an exception occurs or not.
+Used to release resources(e.g., close files, database connections).
+
+eg:
+try {
+    int[] arr = new int[3];
+    System.out.println(arr[5]); // ArrayIndexOutOfBoundsException
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Array index out of bounds: " + e.getMessage());
+}
+
+
+4.throw Keyword:
+Used to explicitly throw an exception.
+
+eg:
+public void checkAge(int age) {
+    if (age < 18) {
+        throw new IllegalArgumentException("Age must be 18 or above.");
+    }
+}
+
+5.Throws Keyword:
+Declares exceptions that a method might throw
+
+eg:
+public void readFile(String fileName) throws IOException {
+    FileReader file = new FileReader(fileName);
+}
+

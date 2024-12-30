@@ -1,0 +1,23 @@
+Exception in Java:
+To handle runtime errors and maintain the normal of an appliacation.
+Its allows developer to manage the exception in a structured way, ensuring the program donot crash unexceptedly.
+
+What is exception?
+Exception is an event that disrupts the normal flow of program during execution.
+It is an object representing an error condition.
+
+Types of Exception:
+
+1.Checked Exceptions:
+Exception checked at compile time.
+Must be declared in a throws clause or handled using a try-catch block
+Eg: IOException,SQLException.
+
+2.Unchecked Exceptions:
+Exceptions not checked at compile time.
+Subclasses of RuntimeException.
+Eg:ArithmeticException, NullPointerException.
+
+3.Errors:
+Serious issues beyond the application's control.
+Eg:OutOfMemoryError, StackOverflowError.
