@@ -1,0 +1,16 @@
+Java uses automatic memory management system called Garbage Collection(GC) to manage memory effeciently.
+It eliminates the need for developers to manually allocate and deallocate memory.
+Ensuring that the application runs without memory leak or invalid memory accesses.
+
+Garbage Collection:
+Process of recliaming memory occupied by objects that are no longer accessible in application.
+The JVM automatically identifies and removes such objects.
+
+How GC works:
+1.Mark Phase:
+Identifies objects that are still in use/reachable by traversing from root references.
+
+2.Sweep/Compact Phase:
+Removes objects that are no longer reachable.
+Compacts memory t avoid fragmentation(optional depending on the GC algorithm).
+
