@@ -1,0 +1,39 @@
+GC Algorithms:
+
+1.Serial Garbage Collector:
+    Single Threaded, suitable for single threaded applications
+    Uses stop the world pauses during collections
+
+2.Parallel Garbage Collector(Throughout GC)
+    Multi-threaded collector for the Young Generation.
+    Focuses on application throughput.
+
+3.CMS( Concurrent  Mark-Sweep) Collector:
+    Concurrently collects garbage with minimal pauses
+    Suitable for applications requiring low-latency
+
+4.G1( Grabage First) Garbage collection:
+    Divides the heap into regions.
+    Priorities region with the most garbage for collection.
+    Balances throughput and low latency.
+Configuration Options for G1 GC
+JVM Option       	          Description
+-XX:+UseG1GC	              ->Enables G1 GC.
+-XX:MaxGCPauseMillis=<time>	  ->Sets the desired maximum pause time (in ms).
+-XX:InitiatingHeapOccupancyPercent=<value>	->Triggers concurrent GC when heap usage exceeds this percentage (default: 45%).
+-XX:G1HeapRegionSize=<size>	  ->Specifies the region size (e.g., 1MB, 2MB).
+-XX:+PrintGCDetails	          ->Prints detailed GC logs for analysis.
+
+5.Z Garbage Collector(ZGC)
+    Designed for low latency applications.
+    Handles large heaps( upto terabytes) with minimal pause time.
+
+6.Shenandoad GC:
+    Focuses on ultra-low pause times by concurrent defragmentation.
+
+Triggers for Garbage Collection:
+Heap Memory Exhaustion:
+GC is triggered when the heap is almost full.
+
+Explicit Request:
+You can request GC using System.gc() or Runtime.getRuntime().gc(), but it's only a hint, not guaranteed.

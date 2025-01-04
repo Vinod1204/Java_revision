@@ -1,0 +1,32 @@
+Java application use the Java Virtual Machine(JVM), which manages memory in two primary areas:
+1.Heap Memory : Store objects and class instances.
+2.Stack Memory : Stores methods calls, local variables, and references to objects.
+
+Memory Structure in Java:
+1.Method Area:
+*Stores class metadata ,static variables and runtime constant pool.
+*shared among all threads
+
+2.Heap:
+*Stores objects and JRE classes
+*Divided into 
+ 
+ *Young Generation: New;y created objects(short-lived)
+    Eden Space : Where objects are initially allocated.
+    Survivor Space S0 & S1 : Holds objects that survived one or more garbage collection cycles.
+ 
+ *Old Generation:(tenured)
+    Long-lived objects that survived multiple GC cycles.
+
+ *Humongous Region: Stores large objects (larger than 50% of the region size).
+
+3.Stack:
+    .Stores method calls,local variables and reference variables.
+    .Each thread gets its own thread.
+
+4.PC register:
+    Keeps track of the address of the current instruction for each thread.
+
+5.Native Method Stack:
+    Used for Native method execution
+    

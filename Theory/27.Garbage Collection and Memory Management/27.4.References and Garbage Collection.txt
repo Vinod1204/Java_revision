@@ -1,0 +1,34 @@
+References and Garbage Collection
+Java provides several types of references that affect an object’s eligibility for GC:
+
+Types of References in Java
+Strong Reference
+Soft Reference
+Weak Reference
+Phantom Reference
+These are all part of the java.lang.ref package (except for strong references, which are implicit in Java).
+
+1.Strong References:
+Normal object references.
+The object is not eligible for GC unless the reference is explicitly set to null.
+
+String strongRef = new String("Hello");
+strongRef = null; // Eligible for GC
+
+2.Soft references:
+Used for memory-sensitive caches.
+Objects are collected only when the JVM is about to run out of memory.
+
+SoftReference<String> softRef = new SoftReference<>(new String("Hello"));
+
+2.Weak References:
+Collected during the next GC cycle if no strong references exist.
+Useful for mappings like WeakHashMap.
+
+WeakReference<String> weakRef = new WeakReference<>(new String("Hello"));
+
+4.Phantom References:
+Used for post-GC cleanup tasks.
+Requires a ReferenceQueue.
+
+PhantomReference<String> phantomRef = new PhantomReference<>(new String("Hello"), new ReferenceQueue<>());
