@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Zigzag_Conversion",
+            "request": "launch",
+            "mainClass": "Zigzag_Conversion",
+            "projectName": "Java_revision_dc69b66b"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
