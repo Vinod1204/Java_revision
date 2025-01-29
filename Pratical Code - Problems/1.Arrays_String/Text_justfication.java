@@ -27,6 +27,7 @@ Output:
    "example  of text",
    "justification.  "
 ]
+
 Example 2:
 
 Input: words = ["What","must","be","acknowledgment","shall","be"], maxWidth = 16
@@ -36,8 +37,10 @@ Output:
   "acknowledgment  ",
   "shall be        "
 ]
-Explanation: Note that the last line is "shall be    " instead of "shall     be", because the last line must be left-justified instead of fully-justified.
+Explanation: Note that the last line is "shall be    " instead of "shall     be",
+ because the last line must be left-justified instead of fully-justified.
 Note that the second line is also left-justified because it contains only one word.
+
 Example 3:
 
 Input: words = ["Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"], maxWidth = 20
